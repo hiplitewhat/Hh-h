@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F1117"
+    android:padding="0dp">
+
+    <!-- ── Header ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#1A1D27"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🤖 AI Assistant"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● Online"
+            android:textColor="#4CAF50"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- ── Quick action buttons ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#151720"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnExplore"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="✨ Explore"
+            android:textSize="11sp"
+            android:background="@drawable/btn_chip"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnYouTube"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="▶ YouTube"
+            android:textSize="11sp"
+            android:background="@drawable/btn_chip"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnWordle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="🟩 Wordle"
+            android:textSize="11sp"
+            android:background="@drawable/btn_chip"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- ── Chat log ── -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/chatLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#E0E0E0"
+            android:textSize="15sp"
+            android:lineSpacingExtra="2dp"
+            android:fontFamily="monospace" />
+    </ScrollView>
+
+    <!-- ── Loading bar ── -->
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:indeterminate="true"
+        android:progressTint="#7C4DFF"
+        android:indeterminateTint="#7C4DFF"
+        android:visibility="gone" />
+
+    <!-- ── Input row ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A1D27"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/inputField"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/input_bg"
+            android:hint="Ask me anything..."
+            android:hintTextColor="#666880"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:text="➤"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_send"
+            android:padding="0dp" />
+    </LinearLayout>
+
+</LinearLayout>
