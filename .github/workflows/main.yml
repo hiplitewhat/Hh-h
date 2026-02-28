@@ -1,4 +1,4 @@
-name: Build project on PR
+uuuname: Build project on PR
 
 on:
   pull_request:
