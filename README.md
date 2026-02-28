@@ -1,4 +1,4 @@
-# AI Assistant — Android APK Template
+iooooo# AI Assistant — Android APK Template
 
 A standalone Android AI chat app powered by Cloudflare Workers AI (Llama 3 8B).
 No Roblox. No third-party AI SDK keys required. Just drop it into Android Studio and build.
