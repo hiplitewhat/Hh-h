@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FloatingIconOverlay" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#6C63FF</item>
+        <item name="colorPrimaryVariant">#4A43CC</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#FF6584</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:statusBarColor">#1A1A2E</item>
+    </style>
+</resources>

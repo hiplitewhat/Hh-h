@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#1A1A2E">
+
+    <TextView
+        android:text="🔮"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="64sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:text="Floating Icon Overlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#AAAAAA"
+        android:text="⭕ Floating icon is INACTIVE"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnEnable"
+        android:layout_width="240dp"
+        android:layout_height="56dp"
+        android:text="▶  Enable Floating Icon"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#6C63FF"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnDisable"
+        android:layout_width="240dp"
+        android:layout_height="56dp"
+        android:text="⏹  Disable Floating Icon"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF6584"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The floating icon stays on top of all apps.\nDrag it anywhere on screen."
+        android:textColor="#666688"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>

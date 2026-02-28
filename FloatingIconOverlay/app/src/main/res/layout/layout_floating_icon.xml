@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <!-- Expanded menu panel (hidden by default) -->
+    <LinearLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#CC1A1A2E"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="🏠  Home"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6C63FF"
+            android:layout_marginBottom="6dp"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btnInfo"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="ℹ️  About"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#43A895"
+            android:layout_marginBottom="6dp"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="⚙️  Settings"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF6584"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <!-- The floating icon bubble -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Main draggable icon -->
+        <ImageView
+            android:id="@+id/ivFloatingIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_floating_bubble"
+            android:background="@drawable/bg_floating_icon"
+            android:elevation="8dp"
+            android:padding="12dp"/>
+
+        <!-- Close button -->
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="#CC333333"
+            android:layout_marginStart="4dp"
+            android:elevation="8dp"
+            android:padding="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
