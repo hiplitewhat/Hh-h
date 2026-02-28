@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace 'com.example.floatingiconoverlay'
+    namespace 'com.aiassistant'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.floatingiconoverlay"
-        minSdk 23
+        applicationId "com.aiassistant"
+        minSdk 24              // Android 7.0+
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -16,12 +16,12 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
         }
         debug {
             applicationIdSuffix ".debug"
+            debuggable true
         }
     }
 
@@ -32,7 +32,15 @@ android {
 }
 
 dependencies {
+    // AppCompat for theme support
     implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    // Material components
     implementation 'com.google.android.material:material:1.11.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // OkHttp for HTTP requests + logging
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+
+    // JSON (org.json is built-in to Android, no dep needed)
 }
