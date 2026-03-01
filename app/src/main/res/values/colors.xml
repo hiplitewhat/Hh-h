@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#7C4DFF</color>
-    <color name="colorPrimaryDark">#5E35B1</color>
-    <color name="colorAccent">#7C4DFF</color>
-    <color name="bgDark">#0F1117</color>
-    <color name="bgCard">#1A1D27</color>
-    <color name="textPrimary">#FFFFFF</color>
-    <color name="textSecondary">#9E9EBE</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_dark">#FF121212</color>
+    <color name="surface_dark">#FF1E1E1E</color>
+    <color name="gemini_blue">#FF4285F4</color>
+    <color name="youtube_red">#FFFF0000</color>
+    <color name="success_green">#FF34A853</color>
+    <color name="warning_yellow">#FFFBBC04</color>
+    <color name="error_red">#FFEA4335</color>
+    <color name="purple">#FF9C27B0</color>
 </resources>

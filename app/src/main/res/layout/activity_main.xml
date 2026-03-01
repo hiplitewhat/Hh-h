@@ -1,152 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#0F1117"
-    android:padding="0dp">
+    android:background="#121212"
+    android:fillViewport="true">
 
-    <!-- ── Header ── -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#1A1D27"
-        android:gravity="center_vertical"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:elevation="4dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="🤖 AI Assistant"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/statusDot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="● Online"
-            android:textColor="#4CAF50"
-            android:textSize="12sp" />
-    </LinearLayout>
-
-    <!-- ── Quick action buttons ── -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#151720"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/btnExplore"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="6dp"
-            android:text="✨ Explore"
-            android:textSize="11sp"
-            android:background="@drawable/btn_chip"
-            android:textColor="#FFFFFF" />
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GoToGemini"
+            android:textSize="28sp"
+            android:textColor="#4285F4"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI Automation Hub"
+            android:textSize="14sp"
+            android:textColor="#9E9E9E"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: Ready"
+            android:textColor="#34A853"
+            android:textSize="13sp"
+            android:padding="8dp"
+            android:background="#1E1E1E"
+            android:layout_marginBottom="12dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Gemini Prompt Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💎 Gemini Prompts"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/promptSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#1E1E1E"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/promptInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type a custom prompt..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#666666"
+            android:background="#1E1E1E"
+            android:padding="12dp"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/goGeminiButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Send to Gemini"
+                android:backgroundTint="#4285F4"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btnAutoSequence"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Auto Sequence"
+                android:backgroundTint="#34A853"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Navigation Buttons -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚀 Automation Modules"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
 
         <Button
             android:id="@+id/btnYouTube"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="6dp"
-            android:text="▶ YouTube"
-            android:textSize="11sp"
-            android:background="@drawable/btn_chip"
-            android:textColor="#FFFFFF" />
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📺  YouTube Automation"
+            android:backgroundTint="#FF0000"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
 
         <Button
-            android:id="@+id/btnWordle"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:layout_weight="1"
-            android:text="🟩 Wordle"
-            android:textSize="11sp"
-            android:background="@drawable/btn_chip"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+            android:id="@+id/btnAppControl"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📱  App Control Panel"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
 
-    <!-- ── Chat log ── -->
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="12dp"
-        android:clipToPadding="false">
+        <Button
+            android:id="@+id/btnStopAll"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🛑  Emergency Stop"
+            android:backgroundTint="#EA4335"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
 
+        <!-- WebView -->
         <TextView
-            android:id="@+id/chatLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#E0E0E0"
-            android:textSize="15sp"
-            android:lineSpacingExtra="2dp"
-            android:fontFamily="monospace" />
-    </ScrollView>
-
-    <!-- ── Loading bar ── -->
-    <ProgressBar
-        android:id="@+id/loadingBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:indeterminate="true"
-        android:progressTint="#7C4DFF"
-        android:indeterminateTint="#7C4DFF"
-        android:visibility="gone" />
-
-    <!-- ── Input row ── -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#1A1D27"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <EditText
-            android:id="@+id/inputField"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/input_bg"
-            android:hint="Ask me anything..."
-            android:hintTextColor="#666880"
+            android:text="🌐 WebView"
             android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:paddingStart="14dp"
-            android:paddingEnd="14dp"
-            android:imeOptions="actionSend"
-            android:inputType="text"
-            android:maxLines="1" />
-
-        <Button
-            android:id="@+id/sendButton"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:text="➤"
             android:textSize="18sp"
-            android:textColor="#FFFFFF"
-            android:background="@drawable/btn_send"
-            android:padding="0dp" />
-    </LinearLayout>
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
 
-</LinearLayout>
+        <android.webkit.WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#1E1E1E"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Activity Log -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 Activity Log"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/logRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#1E1E1E"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>

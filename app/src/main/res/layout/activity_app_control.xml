@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <Button
+                android:id="@+id/btnControlBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="←"
+                android:backgroundTint="#333333"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📱 App Control"
+                android:textColor="#9C27B0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Toggles Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚡ Quick Toggles"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📶  Wi-Fi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+                <Switch
+                    android:id="@+id/switchWifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🔵  Bluetooth"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+                <Switch
+                    android:id="@+id/switchBluetooth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🔦  Flashlight"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+                <Switch
+                    android:id="@+id/switchFlashlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- App Launchers -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚀 Launch Apps"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:layout_marginBottom="16dp"
+            android:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/btnWhatsApp"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_columnWeight="1"
+                android:text="WhatsApp"
+                android:backgroundTint="#25D366"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnChrome"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_columnWeight="1"
+                android:text="Chrome"
+                android:backgroundTint="#4285F4"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnMaps"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_columnWeight="1"
+                android:text="Maps"
+                android:backgroundTint="#34A853"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnGmail"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_columnWeight="1"
+                android:text="Gmail"
+                android:backgroundTint="#EA4335"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_columnWeight="1"
+                android:text="Camera"
+                android:backgroundTint="#607D8B"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/btnCalendar"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_columnWeight="1"
+                android:text="Calendar"
+                android:backgroundTint="#FF6D00"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+        </GridLayout>
+
+        <!-- Utilities -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔧 Utilities"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <EditText
+                android:id="@+id/phoneNumberInput"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="Phone number..."
+                android:textColor="#FFFFFF"
+                android:textColorHint="#666666"
+                android:background="#1E1E1E"
+                android:padding="12dp"
+                android:inputType="phone"
+                android:layout_marginEnd="8dp" />
+            <Button
+                android:id="@+id/btnMakeCall"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="📞 Call"
+                android:backgroundTint="#34A853"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <EditText
+                android:id="@+id/urlInput"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="URL to open..."
+                android:textColor="#FFFFFF"
+                android:textColorHint="#666666"
+                android:background="#1E1E1E"
+                android:padding="12dp"
+                android:inputType="textUri"
+                android:layout_marginEnd="8dp" />
+            <Button
+                android:id="@+id/btnOpenUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="🌐 Open"
+                android:backgroundTint="#4285F4"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="⚙️  Open System Settings"
+            android:backgroundTint="#607D8B"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

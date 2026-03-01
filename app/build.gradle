@@ -1,14 +1,15 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.aiassistant'
+    namespace 'com.example.gotogemini'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.aiassistant"
-        minSdk 24              // Android 7.0+
+        applicationId "com.example.gotogemini"
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -16,31 +17,32 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            applicationIdSuffix ".debug"
-            debuggable true
         }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 }
 
 dependencies {
-    // AppCompat for theme support
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-
-    // Material components
     implementation 'com.google.android.material:material:1.11.0'
-
-    // OkHttp for HTTP requests + logging
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
-
-    // JSON (org.json is built-in to Android, no dep needed)
+    implementation 'com.google.code.gson:gson:2.10.1'
 }
