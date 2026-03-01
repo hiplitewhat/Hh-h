@@ -1,4 +1,4 @@
-hb# GoToGemini — AI Automation Hub
+hb# GoToGemini — AI Aujjtomation Hub
 
 ## 🚀 Complete Android APK Project
 
