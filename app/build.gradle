@@ -8,13 +8,8 @@ android {
     compileSdk 34
 
     defaultConfig {
-<<<<<<< HEAD
         applicationId "com.example.gotogemini"
         minSdk 26
-=======
-        applicationId "com.aiassistant"
-        minSdk 27              // Android 7.0+
->>>>>>> 0143dc1023eaf06508a7cc5b377ea8cf2898bd19
         targetSdk 34
         versionCode 1
         versionName "1.0"
