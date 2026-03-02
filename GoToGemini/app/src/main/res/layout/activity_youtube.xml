@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <Button
+            android:id="@+id/btnYtBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="←"
+            android:backgroundTint="#333333"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📺 YouTube Automation"
+            android:textColor="#FF0000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingStart="8dp" />
+    </LinearLayout>
+
+    <!-- Search -->
+    <EditText
+        android:id="@+id/ytSearchInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Search YouTube or paste playlist URL..."
+        android:textColor="#FFFFFF"
+        android:textColorHint="#666666"
+        android:background="#1E1E1E"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Config Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="4dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Frames/Video"
+                android:textColor="#9E9E9E"
+                android:textSize="12sp" />
+            <Spinner
+                android:id="@+id/framesSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#1E1E1E" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="4dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Videos to Capture"
+                android:textColor="#9E9E9E"
+                android:textSize="12sp" />
+            <Spinner
+                android:id="@+id/videosSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#1E1E1E" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnYtSearch"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Search"
+            android:backgroundTint="#FF0000"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnYtPlaylist"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Playlist"
+            android:backgroundTint="#FF6D00"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="4dp" />
+
+        <Button
+            android:id="@+id/btnYtCapture"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Capture"
+            android:backgroundTint="#34A853"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/ytStatusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status: Ready"
+        android:textColor="#34A853"
+        android:textSize="13sp"
+        android:padding="8dp"
+        android:background="#1E1E1E"
+        android:layout_marginBottom="8dp" />
+
+    <ProgressBar
+        android:id="@+id/ytProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp" />
+
+    <!-- WebView -->
+    <android.webkit.WebView
+        android:id="@+id/ytWebView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000" />
+
+</LinearLayout>
